@@ -1,0 +1,54 @@
+{% extends 'base-sw.html.twig' %}
+
+{% block title %}Films{% endblock %}
+
+{% block page_nav_links %}
+<a class="nav-link active" aria-current="page" href="/film">Films</a>
+<a class="nav-link" href="/character">Characters</a>
+{% endblock %}
+
+{% block main_content %}
+<br>
+<h1 class="mb-0 text-warning text-start">Films</h1>
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Episode</th>
+      <th scope="col">Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/1">A New Hope</a></th>
+      <td>Ep4</td>
+      <td>1977-05-25</td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/2">The Empire Strikes Back</a></th>
+      <td>Ep5</td>
+      <td>1980-05-17</td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/3">Return of the Jedi</a></th>
+      <td>Ep6</td>
+      <td>1983-05-25</td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/4">The Phantom Menace</a></th>
+      <td>Ep1</td>
+      <td>1999-05-19</td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/5">Attack of the Clones</a></th>
+      <td>Ep2</td>
+      <td>2002-05-16</td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/film/6">Revenge of the Sith</a></th>
+      <td>Ep3</td>
+      <td>2005-05-19</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
