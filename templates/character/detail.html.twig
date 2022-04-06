@@ -1,0 +1,59 @@
+{% extends 'base-sw.html.twig' %}
+
+{% block title %}Character - Luke Skywaker{% endblock %}
+
+{% block page_nav_links %}
+<a class="nav-link" href="/film">Films</a>
+<a class="nav-link active" aria-current="page" href="/character">Characters</a>
+{% endblock %}
+
+{% block main_content %}
+{# @2do: these styles need to be moved to proper external stylesheet #}
+<style>
+.card {
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+.card-body {
+  padding-bottom: 12px;
+}
+.card .card-title, .card .card-text {
+    color: #000;
+}
+.card-text {
+  display: none;
+}
+</style>
+
+<br><br>
+<h1 class="mb-0 text-warning text-start">Character: <span class="text-white">Luke Skywalker</span></h1>
+<h3 class="text-start"><span class="text-warning">Gender:</span> male. <span class="float-end fs-5"><span class="text-warning">Specie:</span> N/A</span></h3>
+<h3 class="text-start text-warning">Films ...</h3>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/film/1" class="text-dark">A New Hope</a></h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/film/2" class="text-dark">The Empire Strikes Back</a></h5>
+        <p class="card-text">This is a short card.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/film/3" class="text-dark">Return of the Jedi</a></h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+{% endblock %}
