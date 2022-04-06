@@ -1,0 +1,111 @@
+{% extends 'base-sw.html.twig' %}
+
+{% block title %}Characters{% endblock %}
+
+{% block page_nav_links %}
+<a class="nav-link" href="/film">Films</a>
+<a class="nav-link active" aria-current="page" href="/character">Characters</a>
+{% endblock %}
+
+{% block main_content %}
+{# @2do: these styles need to be moved to proper external stylesheet #}
+<style>
+.page-item .page-link {
+  color: #fff !important;
+  background-color: #444 !important;
+  border-color: #333 !important;
+}
+.page-item.active .page-link {
+  color: #ffc107 !important;
+  font-weight: bold;
+}
+.page-item.disabled .page-link {
+  color: #444 !important;
+}
+</style>
+
+<br>
+<h1 class="mb-0 text-warning text-start">Characters</h1>
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Species</th>
+      <th scope="col">Films</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/1">Luke Skywalker</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/2">C-3PO</a></th>
+      <td>Droid</td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a> <a href="/film/3" title="The Phantom Menace" class="badge bg-info text-dark">Ep1</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/3">R2-D2</a></th>
+      <td>Droid</td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a> <a href="/film/3" title="The Phantom Menace" class="badge bg-info text-dark">Ep1</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/4">Darth Vader</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/5">Leia Organa</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/6">Owen Lars</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a></td>
+    </tr>
+
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/7">Beru Whitesun lars</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/8">R5-D4</a></th>
+      <td>Droid</td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/9">Biggs Darklighter</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a></td>
+    </tr>
+    <tr>
+      <th scope="row"><a class="link-warning" href="/character/10">Obi-Wan Kenobi</a></th>
+      <td></td>
+      <td><a href="/film/1" title="A New Hope" class="badge bg-warning text-dark">Ep4</a> <a href="/film/2" title="The Empire Strikes Back" class="badge bg-warning text-dark">Ep5</a> <a href="/film/3" title="Return of the Jedi" class="badge bg-warning text-dark">Ep6</a> <a href="/film/3" title="The Phantom Menace" class="badge bg-info text-dark">Ep1</a></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
